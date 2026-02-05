@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineStore | İletişim</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.19.3/assets/minecraft/textures/item/written_book.png"
+        type="image/png">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">MINESTORE</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="blocks.html">Bloklar</a></li>
+            <li><a href="items.html">Eşyalar</a></li>
+            <li><a href="contact.html" class="active">İletişim</a></li>
+            <li><a href="cart.html">Sepet <span id="cart-count" class="badge">0</span></a></li>
+        </ul>
+        <form action="search.html" method="GET" class="nav-search-form">
+            <input type="text" name="query" class="nav-search-input" placeholder="Ürün ara..." required>
+            <button type="submit" class="nav-search-btn"><i class="fas fa-search"></i></button>
+        </form>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">BİZE ULAŞIN</h2>
+
+        <div class="contact-layout">
+            <!-- Section 1: Contact Info -->
+            <div class="contact-info-card">
+                <h3 class="info-title"><i class="fas fa-map-signs"></i> İletişim Bilgileri</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Merkez Ofis:</strong><br>
+                        Kaman Ahi Anadolu Lisesi<br>Kırşehir, Türkiye
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>E-posta:</strong><br>
+                        destek@minestore.com
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Telefon:</strong><br>
+                        +90 (545) 922 06 40
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Çalışma Saatleri:</strong><br>
+                        Hafta içi: 09:00 - 18:00
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Smart Complaint/Feedback Form -->
+            <div class="contact-form-card">
+                <h3 class="info-title"><i class="fas fa-paper-plane"></i> Geri Bildirim Formu</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Adınız Soyadınız</label>
+                        <input type="text" id="contact-name" class="form-control" placeholder="Steve H." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="complaint-type">Bildirim Türü</label>
+                        <select id="complaint-type" class="form-control" required>
+                            <option value="" disabled selected>Lütfen seçiniz...</option>
+                            <option value="delivery">Ürün Teslimatı</option>
+                            <option value="block-data">Hatalı Blok Bilgisi</option>
+                            <option value="visual-bug">Görsel Hatası</option>
+                            <option value="payment">Ödeme Sorunu</option>
+                            <option value="other">Diğer</option>
+                        </select>
+                    </div>
+
+                    <!-- Hidden Fields -->
+                    <div id="other-fields" class="hidden">
+                        <div class="form-group">
+                            <label for="other-subject">Konu</label>
+                            <input type="text" id="other-subject" class="form-control" placeholder="Konu başlığı...">
+                        </div>
+                        <div class="form-group">
+                            <label for="other-message">Mesajınız</label>
+                            <textarea id="other-message" class="form-control" rows="3"
+                                placeholder="Lütfen detaylı açıklayınız..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%;">GÖNDER</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section" style="margin-top: 4rem;">
+            <h2 class="section-title" style="font-size: 1.5rem;">SIKÇA SORULAN SORULAR</h2>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Siparişim ne zaman gelir?</h4>
+                    <p>Ender Sandığı kuryelerimiz siparişlerinizi genellikle 2 iş günü içinde teslim eder.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>İade kabul ediyor musunuz?</h4>
+                    <p>Kullanılmamış ve kırılmamış blokları 14 gün içinde iade edebilirsiniz. Obsidyenler iade edilemez.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h4>Ödeme yöntemleri nelerdir?</h4>
+                    <p>Zümrüt, Elmas ve Altın Külçesi kabul ediyoruz. Kredi kartı ile TL ödemesi de yapabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="feedback-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-check-circle"></i> BAŞARILI!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Mesajınız Başarıyla İletildi!</p>
+                <p style="font-size: 0.9rem; color: #666; margin-top: 5px;">En kısa sürede size dönüş yapacağız.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="close-modal-btn" class="btn-primary">KAPAT</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>MINESTORE</h4>
+                <p class="footer-desc">Minecraft evreninin en güvenilir blok ve eşya tedarikçisi. Steve ve Alex'in
+                    onayıyla 2024'ten beri hizmetinizde.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>HIZLI LİNKLER</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="blocks.html">Bloklar</a></li>
+                    <li><a href="items.html">Eşyalar</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                    <li><a href="cart.html">Sepetim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>İLETİŞİM</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Kırşehir, Türkiye</li>
+                    <li><i class="fas fa-phone"></i> +90 (555) 555 55 55</li>
+                    <li><i class="fas fa-envelope"></i> idrocan@protonmail.com</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>BÜLTEN</h4>
+                <p class="footer-desc">Yeni gelen bloklardan haberdar ol!</p>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="E-posta adresi">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 MineStore. Tüm hakları saklıdır.
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
